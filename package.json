@@ -1,0 +1,19 @@
+{
+  "name": "lit-element-proyect",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "es-dev-server --app-index index.html --node-resolve --watch --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  },
+  "dependencies": {
+    "lit-element": "^3.2.2"
+  }
+}
