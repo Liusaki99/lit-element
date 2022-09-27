@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
+import styles from './life-cycle-styles.js';
 
 class LifeCycle  extends LitElement {
 
@@ -14,7 +15,7 @@ class LifeCycle  extends LitElement {
 
   static get internalProperties() {
     return {
-        apellidos:{type : String}
+        bandera: {type : Boolean}
     };
   }
 
@@ -22,21 +23,26 @@ class LifeCycle  extends LitElement {
     super();
     this.name = 'life-cycle';
     this.apellidos = "Defecto";
+    this.bandera = false;
+  }
+
+  static get styles () { 
+    return [
+      styles,
+    ]
   }
 
   render() {
     return html`
-      <p> Bienvenido ${this.name} ${this.apellidos}</p>
-      <button @click="${this.cambiar_apellidos}">Cambiar Dom</button>
-    `;
+        <p class="letraMono" ?visible="false"> Bienvenido ${this.name} ${this.apellidos}</p>
+        <button @click="${this.cambiar_dom}">Cambiar Dom</button>
+        `
   }
 
-  cambiar_apellidos() 
+  cambiar_dom() 
   {
-    //this.name = "Andres";
-    this.apellidos = "Rosas Lopez";
-    console.log("boton presionado" + this.apellidos);
-    //this.render();
+    this.bandera = !(this.bandera)
+    console.log(this.bandera);
   }
 
   //Primer metodo que se ejecuta

@@ -29,7 +29,7 @@ class PassFooter  extends LitElement {
 
   render() {
     return html`
-      <footer-component .items="${this.items}"></footer-component>
+      <footer-component .items="${this.items}" ?visible="${false}"></footer-component>
     `;
   }
 }
