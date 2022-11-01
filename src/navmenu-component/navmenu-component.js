@@ -1,4 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
+import styles from '../js/boostrap-style.js';
+import '../js/boostrap.bundle.js';
+
 
 class NavmenuComponent  extends LitElement {
 
@@ -19,10 +22,14 @@ class NavmenuComponent  extends LitElement {
     this.profilepicture = "./src/images/pic.png";
   }
 
+  static get styles() {
+    return [
+      styles,
+    ]
+  }
+
   render() {
     return html`
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Mi Ejemplo</a>
@@ -50,8 +57,6 @@ class NavmenuComponent  extends LitElement {
             </div>
         </div>
     </nav>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
-
     `;
   }
 }

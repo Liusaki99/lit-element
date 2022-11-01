@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
-import styles from './life-cycle-styles.js';
+import styles from '../js/boostrap-style.js';
+import '../../node_modules/bootstrap/dist/js/bootstrap.js';
 
 class LifeCycle  extends LitElement {
 
@@ -34,8 +35,8 @@ class LifeCycle  extends LitElement {
 
   render() {
     return html`
-        <p class="letraMono" ?visible="false"> Bienvenido ${this.name} ${this.apellidos}</p>
-        <button @click="${this.cambiar_dom}">Cambiar Dom</button>
+        <p class="letraMono" ?visible="${this.bandera}"> Bienvenido ${this.name} ${this.apellidos}</p>
+        <button type="button" class="btn btn-primary" @click="${this.cambiar_dom}">Cambiar Dom</button>
         `
   }
 

@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script type="module" src="./src/my-component/my-component.js"></script>
     <script type="module" src="./src/navmenu-component/navmenu-component.js"></script>
     <script type="module" src="./src/life-cycle/life-cycle.js"></script>
     <script type="module" src="./src/footer-component/footer-component.js"></script>
     <script type="module" src="./src/pass-footer/pass-footer.js"></script>
-    <script type="module" src="./src/life-cycle/life-cycle-styles.js"></script>
+    <script type="module" src="./src/carousel-component/carousel-component.js"></script>
+    <script type="module" src="./src/slot-option-carousel/slot-option-carousel.js"></script>
+    <script type="module" src="./src/web_comp_data/web_comp_data.js"></script>
+
     <title>Lit element</title>
 </head>
 <body>
@@ -34,7 +37,21 @@
         </div>
     </div>
 
-    <div>
+    <div class="container">
+      <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <carousel-component img1="./src/images/sk1.jpg" img2="./src/images/sk2.jpg" img ="./src/images/sk3.png"></carousel-component> 
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
       <life-cycle></life-cycle>
     </div>
 
@@ -87,6 +104,7 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>
